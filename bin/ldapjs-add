@@ -9,7 +9,7 @@ var dashdash = require('dashdash');
 var vasync = require('vasync');
 
 var ldap = require('../lib/index');
-var Logger = require('bunyan');
+var log = require('../lib/logger/logger').clientLog;
 
 
 ///--- Globals
@@ -129,13 +129,6 @@ if (!parsed.file)
 
 if (parsed.debug)
   logLevel = (parsed.debug > 1 ? 'trace' : 'debug');
-
-var log = new Logger({
-    name: 'ldapjs',
-    component: 'client',
-    stream: process.stderr,
-    level: logLevel
-});
 
 var client = ldap.createClient({
   url: parsed.url,

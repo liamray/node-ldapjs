@@ -1,4 +1,4 @@
-# LDAPjs
+# LDAPjs No Python version
 
 [!['Build status'][travis_image_url]][travis_page_url]
 
@@ -6,6 +6,11 @@
 [travis_page_url]: https://travis-ci.org/joyent/node-ldapjs
 
 LDAPjs makes the LDAP protocol a first class citizen in Node.js.
+<br/>
+<br/>
+<b>Major changes</b>
+<br/>
+No need Python installation. The original version uses a [bunyan] logger which requires Python installation. This version uses a [winston] logger and doesn't require any additional stuff to install
 
 ## Usage
 

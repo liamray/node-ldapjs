@@ -1,13 +1,12 @@
 // Copyright 2014 Joyent, Inc.  All rights reserved.
 
 var test = require('tape').test;
-var bunyan = require('bunyan');
+const LOG = require('../../lib/logger/logger').testLog;
 
 ///--- Globals
 
 var lib;
 var Parser;
-var LOG = bunyan.createLogger({name: 'ldapjs-test'});
 
 ///--- Tests
 test('load library', function (t) {

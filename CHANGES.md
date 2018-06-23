@@ -1,5 +1,9 @@
 # ldapjs Changelog
 
+## 1.0.2 (no-python)
+
+- bunyan logger replaced with winston logger ( bunyan logger requires Python installation ) 
+
 ## 1.0.2
 
 - Update dtrace-provider dependency

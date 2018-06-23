@@ -1,6 +1,6 @@
 // Copyright 2011 Mark Cavage, Inc.  All rights reserved.
 
-var Logger = require('bunyan');
+const LOG = require('../lib/logger/logger').testLog;
 
 var test = require('tape').test;
 var uuid = require('node-uuid');
@@ -15,14 +15,6 @@ var BIND_PW = 'secret';
 var SOCKET = '/tmp/.' + uuid();
 
 var SUFFIX = 'dc=test';
-
-var LOG = new Logger({
-  name: 'ldapjs_unit_test',
-  stream: process.stderr,
-  level: (process.env.LOG_LEVEL || 'info'),
-  serializers: Logger.stdSerializers,
-  src: true
-});
 
 var ldap;
 var Attribute;

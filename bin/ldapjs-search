@@ -7,7 +7,7 @@ var path = require('path');
 var dashdash = require('dashdash');
 
 var ldap = require('../lib/index');
-var Logger = require('bunyan');
+const log = require('../lib/logger/logger').clientLog;
 
 
 ///--- Globals
@@ -243,13 +243,6 @@ if (parsed.debug)
   logLevel = (parsed.debug > 1 ? 'trace' : 'debug');
 
 var formatter = new EntryFormatter(process.stdout, parsed.format);
-
-var log = new Logger({
-  name: 'ldapjs',
-  component: 'client',
-  stream: process.stderr,
-  level: logLevel
-});
 
 var client = ldap.createClient({
   url: parsed.url,
