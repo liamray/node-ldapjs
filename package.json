@@ -14,7 +14,7 @@
   "name": "ldapjs-no-python",
   "homepage": "http://ldapjs.org",
   "description": "LDAP client and server APIs. No need Python installation. The original version uses a [bunyan] logger which requires Python installation. This version uses a [winston] logger and doesn't require any additional stuff to install",
-  "version": "1.0.2",
+  "version": "1.0.3.1",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -37,7 +37,7 @@
     "once": "^1.4.0",
     "vasync": "^1.6.4",
     "verror": "^1.8.1",
-    "winston": "^3.0.0"
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "node-uuid": "^1.4.7",
